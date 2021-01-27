@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      font-size: 15px;
+
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --orange: hsl(34, 97%, 64%);
+      --blue: hsl(212, 86%, 64%);
+      --grey: hsl(229, 6%, 66%);
+      --darkBlue: hsl(234, 12%, 34%);
+    }
+
+    body {
+      font-family: 'Poppins';
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      box-sizing: border-box;
+      color: var(--grey);
+      text-align: center;
+      margin: 0;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .cards-wrapper .central-cards-wrapper {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+
+    }
+
+    .card {
+      width: 380px;
+      height: 250px;
+      box-shadow: 2px 7px 21px -1px#E1EAF1;
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .card .detail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    h1,
+    h3 {
+      color: var(--darkBlue);
+    }
+
+    @media(max-width:1230px) {
+      .cards-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media(max-width:420px) {
+      .card {
+        width: 320px;
+      }
+
+      body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="font-weight: 200;margin: 0;">
+    Reliable, efficient delivery
+  </h1>
+  <h1 style="font-weight: 600;margin: 0px 0 20px 0;">
+    Powered by Technology
+  </h1>
+  <span>
+    Our Artificial Intelligence powered tools use millions of project data points
+    to ensure that your project is successful
+  </span>
+
+  <div class="cards-wrapper">
+    <div class="card">
+      <div class="detail" style="background:var(--cyan)"></div>
+      <h3>Supervisor</h3>
+      <span>
+        Monitors activity to identify project roadblocks
+      </span>
+      <img src="./images/icon-supervisor.svg" alt="">
+    </div>
+
+    <div class="central-cards-wrapper">
+      <div class="card">
+        <div class="detail" style="background:var(--red)"></div>
+        <h3>Team Builder</h3>
+        <span>
+          Scans our talent network to create the optimal team for your project
+        </span>
+        <img src="./images/icon-team-builder.svg" alt="">
+      </div>
+      <div class="card">
+        <div class="detail" style="background:var(--orange)"></div>
+        <h3>Karma</h3>
+        <span>
+          Regularly evaluates our talent to ensure quality
+        </span>
+        <img src="./images/icon-karma.svg" alt="">
+      </div>
+    </div>
+    <div class="card">
+      <div class="detail" style="background:var(--blue)"></div>
+      <h3>Calculator</h3>
+      <span>
+        Uses data from past projects to provide better delivery estimates
+      </span>
+      <img src="./images/icon-calculator.svg" alt="">
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/marcostl2">Marcos Silva</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
